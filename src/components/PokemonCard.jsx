@@ -5,16 +5,25 @@ const pokemonList = [
   },
   {
     name: 'mew',
+    imgSrc: '',
   },
 ];
 
 export function PokemonCard() {
-  const pokemon = pokemonList[0];
+  const pokemon = pokemonList[1];
+
+  const pokemonDisplay = (pokemon) => {
+    if (pokemon.imgSrc === undefined || pokemon.imgSrc === '') {
+      return <p>???</p>;
+    } else {
+      return <img src={pokemon.imgSrc} alt="" />;
+    }
+  };
 
   return (
     <figure>
-      <img src="" alt="bulbasaur" />
-      <figcaption>bulbasaur</figcaption>
+      {pokemonDisplay(pokemon)}
+      <figcaption>{pokemon.name}</figcaption>
     </figure>
   );
 }
