@@ -9,6 +9,7 @@ const pokemonList = [
   },
   {
     name: 'Mew',
+    imgSrc: 'https://upload.wikimedia.org/wikipedia/sh/thumb/b/bf/Mew.png/640px-Mew.png',
   },
   {
     name: 'Charmander',
@@ -25,9 +26,23 @@ const pokemonList = [
 ];
 
 function App() {
+  const [pokemonIndex, setPokemonIndex] = useState(0);
+
+
+
+  const increment = () => {
+    setPokemonIndex(pokemonIndex + 1);
+  };
+
+  const decrement = () => {
+    setPokemonIndex(pokemonIndex - 1);
+  };
+
   return (
     <div>
-      <PokemonCard pokemon={pokemonList[4]} />
+      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+      {pokemonIndex > 0 && <button onClick={decrement}>Previous</button>}
+      {pokemonIndex < pokemonList.length - 1 && <button onClick={increment}>Next</button>}
     </div>
   );
 }
