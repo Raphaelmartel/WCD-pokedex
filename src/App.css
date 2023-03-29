@@ -41,8 +41,32 @@
   color: #888;
 }
 
-.btn-container {
+nav .btn-container {
   display: flex;
   gap: 1rem;
   justify-content: center;
+}
+
+img {
+  width: 300px;
+}
+
+nav {
+  width: 100%;
+  max-height: 80px;
+  height: 80px;
+  border-radius: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav button {
+  padding: 1rem;
+  border: 1px solid #001225;
+  background-color: #001225;
+  border-radius: 0.5rem;
+  color: #fff;
 }
