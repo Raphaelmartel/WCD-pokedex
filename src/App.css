@@ -70,3 +70,9 @@ nav button {
   border-radius: 0.5rem;
   color: #fff;
 }
+
+figcaption {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}

@@ -1,17 +1,17 @@
-export function NavBar({ pokemonIndex, pokemonList, setPokemonIndex }) {
-  const increment = () => {
-    setPokemonIndex(pokemonIndex + 1);
-  };
-
-  const decrement = () => {
-    setPokemonIndex(pokemonIndex - 1);
-  };
-
+export function NavBar({ pokemonList, setPokemonIndex }) {
   return (
     <nav>
-      {pokemonIndex > 0 && <button onClick={decrement}>Previous</button>}
-
-      {pokemonIndex < pokemonList.length - 1 && <button onClick={increment}>Next</button>}
+      {pokemonList.map((e, buttonIndex) => (
+        <button
+          onClick={() => {
+            setPokemonIndex(buttonIndex);
+            console.log(buttonIndex);
+          }}
+          key={buttonIndex}
+        >
+          {e.name}
+        </button>
+      ))}
     </nav>
   );
 }
