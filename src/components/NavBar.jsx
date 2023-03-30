@@ -7,6 +7,8 @@ export function NavBar({ pokemonIndex, pokemonList, setPokemonIndex }) {
     setPokemonIndex(pokemonIndex - 1);
   };
 
+  pokemonIndex === 4 ? alert('pika pikachu !!!') : null;
+
   return (
     <nav>
       {pokemonIndex > 0 && <button onClick={decrement}>Previous</button>}
